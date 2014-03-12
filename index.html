@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Teamhub - Landing Page</title>
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
+
+  <style>
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #333;
+  font: 300 1em/1.5 Avenir, Lato, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+input {
+  font: inherit;
+}
+
+/**
+ * Hide content while still leaving it accessible.
+ *
+ * 1. Do not leave space for the element.
+ * 2. Leave no portion of the element visible.
+ * 3. Avoid unwanted scrollbars (some browsers clip the box but behave
+ *    as if the element being clipped maintained its original layout.
+ *
+ * http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+ */
+.visually-hidden {
+  position: absolute; /* 1 */
+  clip: rect(1px, 1px, 1px, 1px); /* 2 */
+  height: 1px; /* 3 */
+  width: 1px; /* 3 */
+}
+
+.container {
+  background: #FFF;
+  border-radius: .25em;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2em 1em;
+  position: relative;
+  text-align: center;
+  width: 24em;
+}
+
+input[type="email"] {
+  background: #EBEBEB;
+  border: 0;
+  padding: .5em .75em;
+}
+
+input[type="submit"] {
+  appearance: none;
+  background: #00799F;
+  border: 0;
+  color: #FFF;
+  margin-left: -.4375em;
+  padding: .5em 1em;
+}
+
+@media only screen and (min-width: 40em) {
+
+  body {
+    background: url(teamhub-landing-page-bg.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    top: 50%;
+    *top: 25%; /* IE < 9 */
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="teamhub-logo.svg" alt="Teamhub" height="64" width="206" onerror="this.src=teamhub-logo.png">
+
+    <p>Inom kort släpps en helt ny produkt för att med modern teknik förenkla sättet ditt företag hanterar projekt, resurser och tidsrapportering.</p>
+
+    <p><small>Bli meddelad när vi öppnar portarna:</small></p>
+
+    <form method="post" action="http://teamhub.us3.list-manage1.com/subscribe/post?u=b285f09849b3146cc7af5539a&amp;id=1385b12b2b">
+      <input class="visually-hidden" name="b_b285f09849b3146cc7af5539a_1385b12b2b" value="">
+      <label for="email" class="visually-hidden">Din e-postadress</label>
+      <input id="email" name="EMAIL" type="email" placeholder="din@epost.se">
+      <input name="subscribe" type="submit" value="Skicka">
+    </form>
+  </div>
+
+</body>
+
+</html>
